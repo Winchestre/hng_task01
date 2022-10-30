@@ -12,18 +12,44 @@ body {
    font-family: 'Inter', sans-serif;
 }
 
+.share__link {
+    position: absolute;
+    right: 15em;
+    top: 3.95em;
+    border: 1px dotted #D0D5DD;
+    border-radius: 50%;
+    margin-inline: 2em;
+    padding: .4em .5em;
+}
+
+.share__link:hover {
+    background-color: #D0D5DD;
+}
+
+.nav__link__mobile {
+    display: none;
+}
+
 .profile {
-    margin-top: 8em;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #profile__img {
-    width: 100px;
+    background-image: url(../src/Assets/profile__img.svg);
+    background-repeat: no-repeat;
+    width: 88px;
     aspect-ratio: 1;
     border-radius: 50%;
     margin-bottom: 1.5em;
+    margin-top: 3.95em;
+    transition: all .3s ease-out;
+    cursor: pointer;
+}
+
+#profile__img:hover{
+    background-image: url(./Assets/hoverImg.svg);
 }
 
 .profile h2 {
@@ -44,7 +70,7 @@ body {
 
 
 
-.links a {
+.nav__links {
     text-decoration: none;
     color: #101828;
     background-color: #eaecf0;
@@ -52,14 +78,23 @@ body {
     font-weight: 500;
     cursor: pointer;
     border-radius: 8px;
-    padding: 24px 32px;
+    padding: 1.5em 2em;
+}
+
+.nav__links:hover {
+    background-color: #D0D5DD;
 }
 
 .socials {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1em;
+    gap: 1.5em;
+    transition: transform .3s ease-out;
+}
+
+.socials a:hover {
+    transform: scale(1.2);
 }
 
 
@@ -71,7 +106,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 2em;
+    padding-block: 2em;
 }
 
 .footer h2 {
@@ -82,18 +117,39 @@ body {
 }
 .footer h4 {
     color: #98a2b3;
+    font-weight: 400;
 }
 
+
+/* MEDIA QUERY FOR MEDIUM/SMALL SCREEN DEVICES */
 @media screen and (max-width: 759px) {
+    .nav__link__mobile {
+        display: block;
+        position: absolute;
+        right: 2em;
+        top: 3.25em;
+        margin-inline: 1em;
+    }
+    .share__link {
+        display: none;
+    }
     .links {
     padding-inline: 1em;
+    }
+
+    .nav__links {
+        font-size: .9rem;
+    }
+
+    .socials {
+       margin-top: 1.5em;
     }
     
     .footer {
         flex-direction: column;
         align-items: flex-start;
-        gap: 1.7em;
-        margin-top: 7em;
-
+        gap: 1.5em;
+        margin-top: 4em;
+        margin-inline: 1em;
     }
 }
