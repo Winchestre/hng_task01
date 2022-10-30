@@ -81,7 +81,7 @@ body {
     padding: 1.5em 2em;
 }
 
-.nav__links:hover {
+.nav__links:hover, .nav__links:active {
     background-color: #D0D5DD;
 }
 
@@ -130,6 +130,7 @@ body {
         top: 3.25em;
         margin-inline: 1em;
     }
+
     .share__link {
         display: none;
     }
@@ -139,6 +140,10 @@ body {
 
     .nav__links {
         font-size: .9rem;
+    }
+
+    .nav__links:active {
+        background-color: #D0D5DD;
     }
 
     .socials {
