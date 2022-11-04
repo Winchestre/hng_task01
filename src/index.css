@@ -132,7 +132,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2.5em;
+    height: 100vh;
 }
 
 .header {
@@ -171,6 +171,11 @@ label {
     color: #344054;
 }
 
+.error_msg {
+    color: red;
+    font-size: .7rem;
+}
+
 input[type="text"], input[type="email"], textarea {
     padding: 10px 14px;
     outline: none;
@@ -206,6 +211,18 @@ button {
     border-radius: 8px;
     box-shadow: var(--box--shadow);
     cursor: pointer;
+}
+
+button:focus {
+    background: #1570ef;
+    border: 1px solid #1570ef;
+}
+button:hover {
+    background: #175CD3;
+}
+button:disabled {
+    background: #B2DDFF;
+    border: 1px solid #B2DDFF;
 }
 
 
@@ -248,6 +265,8 @@ button {
 
     .contact {
         margin-inline: .8em;
+        margin-top: 1em;
+        height: initial;
     }
 
     .name_container {
