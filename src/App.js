@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import MainPage from './pages/MainPage';
 import Contact from './pages/Contact';
@@ -7,10 +7,10 @@ import Contact from './pages/Contact';
 const App = () => {
   return (
     <Router basename='/hng_task01'>
-      <Switch>
+      <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='/contact' element={<Contact />} />
-      </Switch>
+      </Routes>
     </Router>
   )
 }
