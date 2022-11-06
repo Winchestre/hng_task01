@@ -6,9 +6,9 @@ import Contact from './pages/Contact';
 
 const App = () => {
   return (
-    <Router basename= {process.env.PUBLIC_URL} >
+    <Router>
       <Routes>
-        <Route exact path='/' element={<MainPage />} />
+        <Route path='/' element={<MainPage />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </Router>
