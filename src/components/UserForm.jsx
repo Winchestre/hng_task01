@@ -13,7 +13,10 @@ const UserForm = () => {
     e.preventDefault();
     if (firstName.length === 0 || lastName.length === 0 || textArea.length === 0 || email.length === 0){
         setError(true);
+    }else{
+
     }
+
   }
     
   return (
@@ -77,10 +80,10 @@ const UserForm = () => {
 
             <div className="checkbox">
                 <input type="checkbox" name="checkbox" id="checkBoxBtn"  className='checkbox_btn'/>
-                <label htmlFor="">You agree to providing your name to {/* {name} */} who may contact you</label>
+                <label htmlFor="">You agree to providing your name to <b>Solomon Bassey</b> who may contact you</label>
             </div>
 
-            <button type="submit" id='btn_submit' /* disabled='false' */>Send message</button>
+            <button type="submit" id='btn_submit' disabled={disable}>Send message</button>
 
 
 
