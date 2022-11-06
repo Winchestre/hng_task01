@@ -83,7 +83,7 @@ const UserForm = () => {
                 <label htmlFor="">You agree to providing your name to <b>Solomon Bassey</b> who may contact you</label>
             </div>
 
-            <button type="submit" id='btn_submit' disabled={disable}>Send message</button>
+            <button type="submit" id='btn_submit'>Send message</button>
 
 
 
