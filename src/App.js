@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
 
-      <Router basename='/'>
+      <Router>
         <Routes>
           <Route path='/' element={<MainPage />} />
           <Route path='/contact' element={<Contact />} />
